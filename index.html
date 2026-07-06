@@ -24,28 +24,51 @@
   </div>
 </nav>
 
-<!-- Spectral classification bar: reused as a divider throughout the site.
-     Real stellar classes O–M, coloured by approximate blackbody temperature. -->
-<template id="spectral-bar-template">
-  <div class="spectral-bar" aria-hidden="true">
-    <span class="sb-seg sb-O" data-k="30000 K">O</span>
-    <span class="sb-seg sb-B" data-k="15000 K">B</span>
-    <span class="sb-seg sb-A" data-k="9000 K">A</span>
-    <span class="sb-seg sb-F" data-k="7000 K">F</span>
-    <span class="sb-seg sb-G" data-k="5700 K">G</span>
-    <span class="sb-seg sb-K" data-k="4200 K">K</span>
-    <span class="sb-seg sb-M" data-k="3000 K">M</span>
-  </div>
-</template>
-
 <header class="hero" id="hero">
-  <p class="eyebrow">R.A. 00h00m00s &nbsp;·&nbsp; Dec. +00°00′00″</p>
-  <h1>Your Name</h1>
-  <p class="tagline">Astrophysicist studying <span class="hl">[your research area, e.g. exoplanet atmospheres]</span> at <span class="hl">[Your Institution]</span>.</p>
-  <div class="hero-links">
-    <a class="btn btn-primary" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
-    <a class="btn btn-ghost" href="#research">See my research →</a>
+
+  <div class="hero-content">
+    <h1>Cameron Morgan</h1>
+
+    <p class="tagline">
+      I'm an astrophysics researcher studying how galaxies form stars and why they stop.
+      I currently am finishing my PhD at the University of Waterloo, and then starting
+      a postdoctoral research position joint between Saint Mary's University and
+      NRC Herzberg in September.
+    </p>
+
+    <div class="hero-links">
+        <a class="btn btn-ghost" href="#research">
+        See my research →
+      </a>
+    </div>
   </div>
+
+  <aside class="profile-card">
+    <img src="me.jpg" alt="Portrait of Cameron Morgan">
+
+    <h2>Cameron Morgan</h2>
+
+    <p class="profile-title">
+      PhD Candidate<br>
+      University of Waterloo
+    </p>
+
+    <div class="profile-contact">
+      <p>
+        <a href="mailto:crmorgan@uwaterloo.ca">
+          crmorgan@uwaterloo.ca
+        </a>
+      </p>
+
+      <a class="btn btn-primary"
+         href="assets/cv.pdf"
+         target="_blank"
+         rel="noopener">
+        Download CV
+      </a>
+  </div>
+  </aside>
+
 </header>
 
 <div class="bar-slot"></div>
@@ -152,7 +175,7 @@
 </main>
 
 <footer>
-  <p>© <span id="year"></span> Your Name · Built with dark matter and dark mode.</p>
+  <p>© <span id="year"></span> Your Name · Built with dark matter and dark mode, and with assistance from Claude.ai and ChatGPT.</p>
 </footer>
 
 <script src="script.js"></script>

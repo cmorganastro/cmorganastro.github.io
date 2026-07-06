@@ -2,9 +2,9 @@
    Design tokens
    ============================================ */
 :root {
-  --bg: #0B0F1A;
+  --bg: #050f24;
   --bg-raised: #131A29;
-  --ink: #E8ECF4;
+  --ink: #4e82ed;
   --ink-dim: #8B93A7;
   --line: #232B3D;
 
@@ -67,7 +67,7 @@ nav#nav {
   justify-content: space-between;
   padding: 20px clamp(20px, 6vw, 64px);
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 24px;
   letter-spacing: 0.02em;
   background: linear-gradient(to bottom, rgba(11,15,26,0.9), transparent);
   transition: background 0.3s ease;
@@ -101,12 +101,79 @@ nav#nav.solid {
   position: relative;
   z-index: 1;
   min-height: 92vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+
+  padding: 0 clamp(20px, 6vw, 64px);
+
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 720px;
+}
+
+.profile-card {
+  width: 320px;
+  height: 580px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.profile-card img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+
+  border-radius: 50%;
+  margin-bottom: 22px;
+}
+
+.profile-card h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.profile-title {
+  color: var(--ink-dim);
+  margin: 10px 0 24px;
+  line-height: 1.5;
+}
+
+.profile-contact {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 clamp(20px, 6vw, 64px);
-  max-width: 980px;
+  gap: 18px;
 }
+
+.profile-contact a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.profile-contact a:hover {
+  text-decoration: underline;
+}
+
+.profile-contact .btn {
+  align-self: center;
+}
+
 
 .eyebrow {
   font-family: var(--font-mono);
@@ -159,30 +226,7 @@ nav#nav.solid {
 }
 .btn-ghost:hover { border-color: var(--ink-dim); }
 
-/* ============================================
-   Spectral bar divider — the site's signature element
-   ============================================ */
-.spectral-bar {
-  display: flex;
-  width: 100%;
-  height: 6px;
-}
-.sb-seg { flex: 1; position: relative; }
-.sb-O { background: var(--c-O); }
-.sb-B { background: var(--c-B); }
-.sb-A { background: var(--c-A); }
-.sb-F { background: var(--c-F); }
-.sb-G { background: var(--c-G); }
-.sb-K { background: var(--c-K); }
-.sb-M { background: var(--c-M); }
 
-.bar-slot {
-  position: relative;
-  z-index: 1;
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 clamp(20px, 6vw, 64px);
-}
 
 /* ============================================
    Main sections
@@ -344,3 +388,27 @@ a:focus-visible, button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .profile-card {
+    width: min(360px, 100%);
+  }
+
+  .profile-info {
+    text-align: center;
+  }
+}
+
