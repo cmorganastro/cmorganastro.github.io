@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Astrophysics Researcher</title>
+<meta name="description" content="Astrophysics researcher — research, publications, and CV.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<nav id="nav">
+  <span class="nav-mark">αCen</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">CV &amp; Contact</a>
+  </div>
+</nav>
+
+<!-- Spectral classification bar: reused as a divider throughout the site.
+     Real stellar classes O–M, coloured by approximate blackbody temperature. -->
+<template id="spectral-bar-template">
+  <div class="spectral-bar" aria-hidden="true">
+    <span class="sb-seg sb-O" data-k="30000 K">O</span>
+    <span class="sb-seg sb-B" data-k="15000 K">B</span>
+    <span class="sb-seg sb-A" data-k="9000 K">A</span>
+    <span class="sb-seg sb-F" data-k="7000 K">F</span>
+    <span class="sb-seg sb-G" data-k="5700 K">G</span>
+    <span class="sb-seg sb-K" data-k="4200 K">K</span>
+    <span class="sb-seg sb-M" data-k="3000 K">M</span>
+  </div>
+</template>
+
+<header class="hero" id="hero">
+  <p class="eyebrow">R.A. 00h00m00s &nbsp;·&nbsp; Dec. +00°00′00″</p>
+  <h1>Your Name</h1>
+  <p class="tagline">Astrophysicist studying <span class="hl">[your research area, e.g. exoplanet atmospheres]</span> at <span class="hl">[Your Institution]</span>.</p>
+  <div class="hero-links">
+    <a class="btn btn-primary" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
+    <a class="btn btn-ghost" href="#research">See my research →</a>
+  </div>
+</header>
+
+<div class="bar-slot"></div>
+
+<main>
+
+  <section id="about">
+    <p class="section-eyebrow">01 — About</p>
+    <h2>Who I am</h2>
+    <p class="lede">
+      I'm a [PhD candidate / postdoc / researcher] in the [Department of Astrophysics] at
+      [Your Institution]. My work focuses on [one clear sentence about your research —
+      e.g. "how planetary atmospheres respond to stellar activity in close-in exoplanets"].
+      Before that, I [one line of background — previous degree, institution, or transition into the field].
+    </p>
+    <p class="lede">
+      Outside the observatory, I [a personal detail — teaching, outreach, a hobby, or what
+      drew you to astrophysics in the first place].
+    </p>
+  </section>
+
+  <div class="bar-slot"></div>
+
+  <section id="research">
+    <p class="section-eyebrow">02 — Research</p>
+    <h2>What I work on</h2>
+    <div class="targets">
+      <article class="target">
+        <p class="target-coord">Target 01</p>
+        <h3>[Research interest one, e.g. Exoplanet Atmospheres]</h3>
+        <p>[Two or three sentences describing this research thread — the question you're
+        asking, the method you use (observation, simulation, theory), and why it matters.]</p>
+      </article>
+      <article class="target">
+        <p class="target-coord">Target 02</p>
+        <h3>[Research interest two, e.g. Stellar Activity]</h3>
+        <p>[Two or three sentences describing this research thread.]</p>
+      </article>
+      <article class="target">
+        <p class="target-coord">Target 03</p>
+        <h3>[Research interest three, e.g. Radiative Transfer Modeling]</h3>
+        <p>[Two or three sentences describing this research thread.]</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="bar-slot"></div>
+
+  <section id="publications">
+    <p class="section-eyebrow">03 — Publications</p>
+    <h2>Selected papers</h2>
+    <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-id">arXiv:0000.00000</p>
+        <p class="pub-title">[Paper title goes here]</p>
+        <p class="pub-meta">[Your Name], [Coauthors] — <em>[Journal]</em>, [Year]</p>
+        <a class="pub-link" href="#" target="_blank" rel="noopener">Read paper →</a>
+      </li>
+      <li class="pub">
+        <p class="pub-id">arXiv:0000.00001</p>
+        <p class="pub-title">[Paper title goes here]</p>
+        <p class="pub-meta">[Your Name], [Coauthors] — <em>[Journal]</em>, [Year]</p>
+        <a class="pub-link" href="#" target="_blank" rel="noopener">Read paper →</a>
+      </li>
+      <li class="pub">
+        <p class="pub-id">arXiv:0000.00002</p>
+        <p class="pub-title">[Paper title goes here]</p>
+        <p class="pub-meta">[Your Name], [Coauthors] — <em>[Journal]</em>, [Year]</p>
+        <a class="pub-link" href="#" target="_blank" rel="noopener">Read paper →</a>
+      </li>
+    </ul>
+    <a class="all-pubs" href="https://scholar.google.com" target="_blank" rel="noopener">Full list on Google Scholar →</a>
+  </section>
+
+  <div class="bar-slot"></div>
+
+  <section id="contact">
+    <p class="section-eyebrow">04 — CV &amp; Contact</p>
+    <h2>Get in touch</h2>
+    <p class="lede">
+      The best way to reach me is by email. I'm always happy to talk about
+      [your subfield], collaborations, or questions from students.
+    </p>
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:you@institution.edu">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">you@institution.edu</span>
+      </a>
+      <a class="contact-item" href="assets/cv.pdf" target="_blank" rel="noopener">
+        <span class="contact-label">CV</span>
+        <span class="contact-value">Download PDF</span>
+      </a>
+      <a class="contact-item" href="https://github.com/yourhandle" target="_blank" rel="noopener">
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">@yourhandle</span>
+      </a>
+      <a class="contact-item" href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">
+        <span class="contact-label">ORCID</span>
+        <span class="contact-value">0000-0000-0000-0000</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Your Name · Built with dark matter and dark mode.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
