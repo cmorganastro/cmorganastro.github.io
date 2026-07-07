@@ -101,14 +101,14 @@ nav#nav.solid {
 .hero {
   position: relative;
   z-index: 1;
-  min-height: 92vh;
+  min-height: 100vh;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: clamp(32px, 6vw, 80px);
 
-  padding: 0 clamp(20px, 6vw, 64px);
+  padding: 120px clamp(20px, 6vw, 64px) 60px;
 
   max-width: 1300px;
   margin: 0 auto;
