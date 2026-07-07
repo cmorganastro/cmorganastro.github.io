@@ -68,7 +68,7 @@ nav#nav {
   justify-content: space-between;
   padding: 20px clamp(20px, 6vw, 64px);
   font-family: var(--font-mono);
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 0.02em;
   background: linear-gradient(to bottom, rgba(11,15,26,0.9), transparent);
   transition: background 0.3s ease;
