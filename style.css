@@ -106,7 +106,7 @@ nav#nav.solid {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 80px;
+  gap: clamp(32px, 6vw, 80px);
 
   padding: 0 clamp(20px, 6vw, 64px);
 
@@ -120,12 +120,12 @@ nav#nav.solid {
 }
 
 .profile-card {
-  width: 320px;
-  height: 580px;
+  width: clamp(220px, 22vw, 320px);
+  height: auto;
   background: white;
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 28px;
+  padding: clamp(18px, 2vw, 28px);
 
   text-align: center;
 
@@ -133,8 +133,8 @@ nav#nav.solid {
 }
 
 .profile-card img {
-  width: 220px;
-  height: 220px;
+  width: clamp(120px, 14vw, 220px);
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 
   border-radius: 50%;
@@ -143,9 +143,8 @@ nav#nav.solid {
 
 .profile-card h2 {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: clamp(1.15rem, 1.8vw, 1.6rem);
 }
-
 .profile-title {
   color: var(--ink-dim);
   margin: 10px 0 24px;
