@@ -336,6 +336,30 @@ section h2 {
 }
 .all-pubs:hover { color: var(--ink); }
 
+.talk-list { list-style: none; margin: 0 0 28px; padding: 0; }
+
+.talk {
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+.talk:last-child { border-bottom: 1px solid var(--line); }
+
+
+.talk-title {
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.talk-meta {
+  font-size: 0.9rem;
+  color: var(--ink-dim);
+  margin: 0 0 10px;
+}
+
+
+
+
 /* Contact */
 .contact-grid {
   display: grid;
