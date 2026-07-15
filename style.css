@@ -265,6 +265,8 @@ section h2 {
 
 
 
+
+
 .about-layout {
   display: flex;
   align-items: center;
@@ -372,6 +374,20 @@ section h2 {
   margin: 0 auto;
   padding: 0 clamp(20px, 6vw, 64px);
 }
+
+.lede a,
+.target-text a,
+.outreach-text a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.lede a:hover,
+.target-text a:hover,
+.outreach-text a:hover {
+  opacity: 0.85;
+}
+
 
 
 /* Publications */
